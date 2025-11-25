@@ -16,23 +16,28 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Top News Section */}
-      <section id="about" className="py-20 border-b border-gold/30">
+      <section
+        id="about"
+        className="py-12 sm:py-16 md:py-20 border-b border-gold/30"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
-              <p className="text-gray-400 text-sm uppercase tracking-widest mb-4 font-semibold">
+              <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4 font-semibold">
                 {t("bassNews")}
               </p>
-              <h1 className="text-5xl md:text-6xl font-serif font-bold text-gold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gold mb-4 sm:mb-6 leading-tight">
                 {t("heroTitle")}
               </h1>
-              <p className="text-gray-400 text-sm mb-6">{t("heroBy")}</p>
-              <p className="text-gray-300 leading-relaxed mb-8 text-lg">
+              <p className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">
+                {t("heroBy")}
+              </p>
+              <p className="text-gray-300 leading-relaxed mb-6 sm:mb-8 text-base sm:text-lg">
                 {t("heroDescription")}
               </p>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="border-2 border-gold text-white px-10 py-4 font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
+                className="border-2 border-gold text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all w-full sm:w-auto"
               >
                 {t("readMore")}
               </button>
@@ -47,30 +52,30 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-gray-950">
+      <section id="services" className="py-12 sm:py-16 md:py-24 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-gray-400 text-sm uppercase tracking-widest mb-4 font-semibold">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4 font-semibold">
               {t("services")}
             </p>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gold mb-3 sm:mb-4">
               {t("bassToday")}
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-start mb-20">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-12 sm:mb-16 md:mb-20">
             <div className="max-w-2xl">
-              <p className="text-gray-300 leading-relaxed mb-10 text-lg">
+              <p className="text-gray-300 leading-relaxed mb-6 sm:mb-8 md:mb-10 text-base sm:text-lg">
                 {t("servicesDescription")}
               </p>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="border-2 border-gold text-white px-10 py-4 font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
+                className="border-2 border-gold text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all w-full sm:w-auto"
               >
                 {t("readMore")}
               </button>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div className="border-2 border-gold/50 p-3">
                 <div className="bg-gray-900 aspect-[4/3] flex items-center justify-center border border-gold/20">
                   <span className="text-gray-400 text-sm font-medium">
@@ -88,25 +93,25 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-t border-gold/30 pt-20">
-            <div className="grid md:grid-cols-2 gap-16 items-start">
-              <div className="border-2 border-gold/50 p-3">
-                <div className="bg-gray-900 aspect-[4/3] flex items-center justify-center border border-gold/20 mb-6">
-                  <span className="text-gray-400 text-sm font-medium">
+          <div className="border-t border-gold/30 pt-12 sm:pt-16 md:pt-20">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start">
+              <div className="border-2 border-gold/50 p-2 sm:p-3">
+                <div className="bg-gray-900 aspect-[4/3] flex items-center justify-center border border-gold/20 mb-4 sm:mb-6">
+                  <span className="text-gray-400 text-xs sm:text-sm font-medium">
                     {t("musicians")}
                   </span>
                 </div>
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-white mb-6 uppercase tracking-wide">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6 uppercase tracking-wide">
                   {t("musiciansTitle")}
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-8 text-lg">
+                <p className="text-gray-300 leading-relaxed mb-6 sm:mb-8 text-base sm:text-lg">
                   {t("musiciansDescription")}
                 </p>
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="border-2 border-gold text-white px-10 py-4 font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
+                  className="border-2 border-gold text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all w-full sm:w-auto"
                 >
                   {t("readMore")}
                 </button>
@@ -117,55 +122,55 @@ export default function Home() {
       </section>
 
       {/* Featured Services */}
-      <section className="py-24 bg-black border-t border-gold/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-black border-t border-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-gray-400 text-sm uppercase tracking-widest mb-4 font-semibold">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4 font-semibold">
               {t("services")}
             </p>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gold mb-3 sm:mb-4">
               {t("featuredServices")}
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-gray-950 p-8 border-2 border-gold/30 hover:border-gold transition-all">
-              <div className="border-2 border-gold/50 p-3 mb-8">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+            <div className="bg-gray-950 p-4 sm:p-6 md:p-8 border-2 border-gold/30 hover:border-gold transition-all">
+              <div className="border-2 border-gold/50 p-2 sm:p-3 mb-4 sm:mb-6 md:mb-8">
                 <div className="bg-gray-900 aspect-[4/3] flex items-center justify-center border border-gold/20">
-                  <span className="text-gray-400 text-sm font-medium">
+                  <span className="text-gray-400 text-xs sm:text-sm font-medium">
                     {t("tutoringSession")}
                   </span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-wide">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide">
                 {t("bassTutoring")}
               </h3>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                 {t("tutoringDescription")}
               </p>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gold uppercase text-sm font-semibold tracking-wider hover:text-white transition-colors"
+                className="text-gold uppercase text-xs sm:text-sm font-semibold tracking-wider hover:text-white transition-colors"
               >
                 {t("readMoreLink")}
               </button>
             </div>
-            <div className="bg-gray-950 p-8 border-2 border-gold/30 hover:border-gold transition-all">
-              <div className="border-2 border-gold/50 p-3 mb-8">
+            <div className="bg-gray-950 p-4 sm:p-6 md:p-8 border-2 border-gold/30 hover:border-gold transition-all">
+              <div className="border-2 border-gold/50 p-2 sm:p-3 mb-4 sm:mb-6 md:mb-8">
                 <div className="bg-gray-900 aspect-[4/3] flex items-center justify-center border border-gold/20">
-                  <span className="text-gray-400 text-sm font-medium">
+                  <span className="text-gray-400 text-xs sm:text-sm font-medium">
                     {t("mentoringSession")}
                   </span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-wide">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide">
                 {t("professionalMentoring")}
               </h3>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                 {t("mentoringDescription")}
               </p>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gold uppercase text-sm font-semibold tracking-wider hover:text-white transition-colors"
+                className="text-gold uppercase text-xs sm:text-sm font-semibold tracking-wider hover:text-white transition-colors"
               >
                 {t("readMoreLink")}
               </button>
@@ -177,18 +182,18 @@ export default function Home() {
       {/* Gallery Section */}
       <section
         id="gallery"
-        className="py-24 bg-gray-950 border-t border-gold/30"
+        className="py-12 sm:py-16 md:py-24 bg-gray-950 border-t border-gold/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-gray-400 text-sm uppercase tracking-widest mb-4 font-semibold">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4 font-semibold">
               {t("getReady")}
             </p>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gold mb-3 sm:mb-4">
               {t("performanceGallery")}
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
@@ -206,36 +211,42 @@ export default function Home() {
       </section>
 
       {/* Info Blocks */}
-      <section className="py-24 bg-black border-t border-gold/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-black border-t border-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-gold mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gold mb-8 sm:mb-12 md:mb-16 text-center">
             {t("bassForever")}
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-950 p-10 border-2 border-gold/30 text-center hover:border-gold transition-all">
-              <div className="text-gold text-6xl mb-6">🎸</div>
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="bg-gray-950 p-6 sm:p-8 md:p-10 border-2 border-gold/30 text-center hover:border-gold transition-all">
+              <div className="text-gold text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6">
+                🎸
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide">
                 {t("tutoring")}
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                 {t("tutoringInfo")}
               </p>
             </div>
-            <div className="bg-gray-950 p-10 border-2 border-gold/30 text-center hover:border-gold transition-all">
-              <div className="text-gold text-6xl mb-6">🎯</div>
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide">
+            <div className="bg-gray-950 p-6 sm:p-8 md:p-10 border-2 border-gold/30 text-center hover:border-gold transition-all">
+              <div className="text-gold text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6">
+                🎯
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide">
                 {t("mentoring")}
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                 {t("mentoringInfo")}
               </p>
             </div>
-            <div className="bg-gray-950 p-10 border-2 border-gold/30 text-center hover:border-gold transition-all">
-              <div className="text-gold text-6xl mb-6">🎵</div>
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide">
+            <div className="bg-gray-950 p-6 sm:p-8 md:p-10 border-2 border-gold/30 text-center hover:border-gold transition-all">
+              <div className="text-gold text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6">
+                🎵
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide">
                 {t("booking")}
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                 {t("bookingInfo")}
               </p>
             </div>
@@ -244,155 +255,210 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-black border-t border-gold/30">
+      <section
+        id="pricing"
+        className="py-12 sm:py-16 md:py-24 bg-black border-t border-gold/30"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-gray-400 text-sm uppercase tracking-widest mb-4 font-semibold">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4 font-semibold">
               {t("pricing")}
             </p>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gold mb-3 sm:mb-4">
               {t("bassLessonPricing")}
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-4">
               {t("pricingDescription")}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {/* Single Lesson */}
-            <div className="bg-gray-950 p-8 border-2 border-gold/30 hover:border-gold transition-all">
-              <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wide">
+            <div className="bg-gray-950 p-4 sm:p-6 md:p-8 border-2 border-gold/30 hover:border-gold transition-all">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 uppercase tracking-wide">
                 {t("singleLesson")}
               </h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gold">€60</span>
-                <span className="text-gray-400 ml-2">{t("perSession")}</span>
+              <div className="mb-4 sm:mb-6">
+                <span className="text-3xl sm:text-4xl font-bold text-gold">
+                  €60
+                </span>
+                <span className="text-gray-400 ml-2 text-sm sm:text-base">
+                  {t("perSession")}
+                </span>
               </div>
-              <ul className="space-y-4 mb-8 text-gray-300">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-gray-300 text-sm sm:text-base">
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("lesson60min")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("inPersonOnline")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("allLevels")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("flexibleScheduling")}</span>
                 </li>
               </ul>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="w-full border-2 border-gold text-white px-6 py-3 font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
+                className="w-full border-2 border-gold text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
               >
                 {t("bookNow")}
               </button>
             </div>
 
             {/* 4-Lesson Package */}
-            <div className="bg-gray-950 p-8 border-2 border-gold relative hover:border-gold transition-all">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-gold text-black px-4 py-1 text-sm font-bold uppercase">
+            <div className="bg-gray-950 p-4 sm:p-6 md:p-8 border-2 border-gold relative hover:border-gold transition-all">
+              <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gold text-black px-3 sm:px-4 py-1 text-xs sm:text-sm font-bold uppercase">
                   {t("popular")}
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wide mt-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 uppercase tracking-wide mt-3 sm:mt-4">
                 {t("fourLessonPackage")}
               </h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gold">€220</span>
-                <span className="text-gray-400 ml-2">{t("perPackage")}</span>
+              <div className="mb-4 sm:mb-6">
+                <span className="text-3xl sm:text-4xl font-bold text-gold">
+                  €220
+                </span>
+                <span className="text-gray-400 ml-2 text-sm sm:text-base">
+                  {t("perPackage")}
+                </span>
               </div>
-              <div className="mb-4">
-                <span className="text-gray-400 line-through">€240</span>
-                <span className="text-gold ml-2 text-sm">{t("save")} €20</span>
+              <div className="mb-3 sm:mb-4">
+                <span className="text-gray-400 line-through text-sm sm:text-base">
+                  €240
+                </span>
+                <span className="text-gold ml-2 text-xs sm:text-sm">
+                  {t("save")} €20
+                </span>
               </div>
-              <ul className="space-y-4 mb-8 text-gray-300">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-gray-300 text-sm sm:text-base">
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("lessons4x")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("inPersonOnline")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("structuredLearning")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("progressTracking")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("valid2Months")}</span>
                 </li>
               </ul>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="w-full bg-gold text-black px-6 py-3 font-semibold uppercase tracking-wider hover:bg-white transition-all"
+                className="w-full bg-gold text-black px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold uppercase tracking-wider hover:bg-white transition-all"
               >
                 {t("bookNow")}
               </button>
             </div>
 
             {/* 8-Lesson Package */}
-            <div className="bg-gray-950 p-8 border-2 border-gold/30 hover:border-gold transition-all">
-              <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wide">
+            <div className="bg-gray-950 p-4 sm:p-6 md:p-8 border-2 border-gold/30 hover:border-gold transition-all">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 uppercase tracking-wide">
                 {t("eightLessonPackage")}
               </h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gold">€400</span>
-                <span className="text-gray-400 ml-2">{t("perPackage")}</span>
+              <div className="mb-4 sm:mb-6">
+                <span className="text-3xl sm:text-4xl font-bold text-gold">
+                  €400
+                </span>
+                <span className="text-gray-400 ml-2 text-sm sm:text-base">
+                  {t("perPackage")}
+                </span>
               </div>
-              <div className="mb-4">
-                <span className="text-gray-400 line-through">€480</span>
-                <span className="text-gold ml-2 text-sm">{t("save")} €80</span>
+              <div className="mb-3 sm:mb-4">
+                <span className="text-gray-400 line-through text-sm sm:text-base">
+                  €480
+                </span>
+                <span className="text-gold ml-2 text-xs sm:text-sm">
+                  {t("save")} €80
+                </span>
               </div>
-              <ul className="space-y-4 mb-8 text-gray-300">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-gray-300 text-sm sm:text-base">
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("lessons8x")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("inPersonOnline")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("comprehensiveCurriculum")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("regularReviews")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("valid4Months")}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gold mr-3">•</span>
+                  <span className="text-gold mr-2 sm:mr-3 flex-shrink-0">
+                    •
+                  </span>
                   <span>{t("bestValue")}</span>
                 </li>
               </ul>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="w-full border-2 border-gold text-white px-6 py-3 font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
+                className="w-full border-2 border-gold text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
               >
                 {t("bookNow")}
               </button>
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-gray-400 text-sm mb-4">{t("pricingNote")}</p>
-            <p className="text-gray-300">
+          <div className="mt-8 sm:mt-12 text-center px-4">
+            <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
+              {t("pricingNote")}
+            </p>
+            <p className="text-gray-300 text-sm sm:text-base">
               {t("customPackage")}{" "}
               <button
                 onClick={() => scrollToSection("contact")}
@@ -409,17 +475,17 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-24 bg-gray-950 border-t border-gold/30"
+        className="py-12 sm:py-16 md:py-24 bg-gray-950 border-t border-gold/30"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-gray-400 text-sm uppercase tracking-widest mb-4 font-semibold">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4 font-semibold">
               {t("contact")}
             </p>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gold mb-3 sm:mb-4">
               {t("getInTouch")}
             </h2>
-            <p className="text-gray-300 leading-relaxed text-lg">
+            <p className="text-gray-300 leading-relaxed text-base sm:text-lg px-4">
               {t("contactDescription")}
             </p>
           </div>
@@ -428,15 +494,15 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-black border-t border-gold/30">
+      <footer className="py-8 sm:py-12 md:py-16 bg-black border-t border-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-serif font-bold text-gold mb-8 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-gold mb-6 sm:mb-8 text-center">
             {t("bassForever")}
           </h2>
-          <p className="text-gray-300 text-center max-w-3xl mx-auto mb-10 leading-relaxed text-lg">
+          <p className="text-gray-300 text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed text-sm sm:text-base md:text-lg px-4">
             {t("footerText")}
           </p>
-          <div className="flex justify-center space-x-8 mb-10">
+          <div className="flex justify-center space-x-6 sm:space-x-8 mb-6 sm:mb-8 md:mb-10">
             <a
               href="#"
               className="text-gold hover:text-white transition-colors"
@@ -507,9 +573,11 @@ function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="text-center py-12 border-2 border-gold/50 p-10 bg-gray-900">
-        <div className="text-gold text-2xl font-bold mb-3">{t("thankYou")}</div>
-        <p className="text-gray-300">{t("willGetBack")}</p>
+      <div className="text-center py-8 sm:py-10 md:py-12 border-2 border-gold/50 p-6 sm:p-8 md:p-10 bg-gray-900">
+        <div className="text-gold text-xl sm:text-2xl font-bold mb-2 sm:mb-3">
+          {t("thankYou")}
+        </div>
+        <p className="text-gray-300 text-sm sm:text-base">{t("willGetBack")}</p>
       </div>
     );
   }
@@ -517,12 +585,12 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 border-2 border-gold/50 p-10 bg-gray-900"
+      className="space-y-4 sm:space-y-6 border-2 border-gold/50 p-4 sm:p-6 md:p-10 bg-gray-900"
     >
       <div>
         <label
           htmlFor="name"
-          className="block text-sm font-semibold text-white mb-3 uppercase tracking-wider"
+          className="block text-xs sm:text-sm font-semibold text-white mb-2 sm:mb-3 uppercase tracking-wider"
         >
           {t("name")} *
         </label>
@@ -533,14 +601,14 @@ function ContactForm() {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-5 py-4 bg-black border-2 border-gold/30 text-white focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all"
+          className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-black border-2 border-gold/30 text-white text-sm sm:text-base focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all"
         />
       </div>
 
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-semibold text-white mb-3 uppercase tracking-wider"
+          className="block text-xs sm:text-sm font-semibold text-white mb-2 sm:mb-3 uppercase tracking-wider"
         >
           {t("email")} *
         </label>
@@ -551,14 +619,14 @@ function ContactForm() {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-5 py-4 bg-black border-2 border-gold/30 text-white focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all"
+          className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-black border-2 border-gold/30 text-white text-sm sm:text-base focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all"
         />
       </div>
 
       <div>
         <label
           htmlFor="service"
-          className="block text-sm font-semibold text-white mb-3 uppercase tracking-wider"
+          className="block text-xs sm:text-sm font-semibold text-white mb-2 sm:mb-3 uppercase tracking-wider"
         >
           {t("serviceInterested")} *
         </label>
@@ -568,7 +636,7 @@ function ContactForm() {
           required
           value={formData.service}
           onChange={handleChange}
-          className="w-full px-5 py-4 bg-black border-2 border-gold/30 text-white focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all"
+          className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-black border-2 border-gold/30 text-white text-sm sm:text-base focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all"
         >
           <option value="booking">{t("bookingPerformance")}</option>
           <option value="tutoring">{t("tutoringLessons")}</option>
@@ -580,7 +648,7 @@ function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-semibold text-white mb-3 uppercase tracking-wider"
+          className="block text-xs sm:text-sm font-semibold text-white mb-2 sm:mb-3 uppercase tracking-wider"
         >
           {t("message")} *
         </label>
@@ -591,14 +659,14 @@ function ContactForm() {
           rows={6}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-5 py-4 bg-black border-2 border-gold/30 text-white focus:ring-2 focus:ring-gold focus:border-gold outline-none resize-none transition-all"
+          className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-black border-2 border-gold/30 text-white text-sm sm:text-base focus:ring-2 focus:ring-gold focus:border-gold outline-none resize-none transition-all"
           placeholder={t("placeholder")}
         />
       </div>
 
       <button
         type="submit"
-        className="w-full border-2 border-gold text-white px-8 py-5 font-bold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
+        className="w-full border-2 border-gold text-white px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base font-bold uppercase tracking-wider hover:bg-gold hover:text-black transition-all"
       >
         {t("sendMessage")}
       </button>
