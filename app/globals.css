@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --gold: #D4AF37;
+  --blue: #4A90E2;
+  --purple: #9B59B6;
+  --teal: #1ABC9C;
+  --orange: #E67E22;
+  --dark-blue: #2C3E50;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .font-serif-heading {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  
+  .border-gold {
+    border-color: var(--gold);
+  }
+  
+  .text-gold {
+    color: var(--gold);
+  }
+  
+  .bg-gold {
+    background-color: var(--gold);
+  }
+}
+
